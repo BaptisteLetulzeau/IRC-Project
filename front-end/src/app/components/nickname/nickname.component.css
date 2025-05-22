@@ -1,0 +1,64 @@
+/* Conteneur principal */
+.modify-username {
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Titre */
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Champs de saisie */
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  /* Effet focus sur les champs */
+  .input-field:focus {
+    border-color: #1e3a8a;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.5);
+  }
+
+  /* Bouton */
+  .submit-btn {
+    width: 100%;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  /* Effet au survol */
+  .submit-btn:hover {
+    background-color: #162d65;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Responsive */
+  @media (max-width: 500px) {
+    .modify-username {
+      width: 90%;
+    }
+  }

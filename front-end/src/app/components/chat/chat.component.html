@@ -1,0 +1,7 @@
+<div class="tabs">
+  <a class="button" (click)="switchTab('public')">Public Chat</a>
+  <a class="button" (click)="switchTab('private')">Private Chat</a>
+</div>
+
+<app-public-chat *ngIf="activeTab === 'public'"></app-public-chat>
+<app-private-chat *ngIf="activeTab === 'private'"></app-private-chat>

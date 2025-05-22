@@ -1,0 +1,133 @@
+.containerPage {
+  font-family: 'Outfit', sans-serif;
+}
+
+.command {
+  width: 500px;
+  height: 30px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.gris {
+  opacity: 0.5;
+  pointer-events: none; /* Empêche les clics */
+}
+
+.normal {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.containerChat {
+  display: flex;
+}
+
+h2 {
+  color: white;
+}
+
+.containerChannel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+  height: 718px;
+  background-color: #181414;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.channels {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 230px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  padding-top: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: space-around;
+  width: 230px;
+  margin-bottom: 5px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 25px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #004c97;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.buttonChannel {
+  width: 95px;
+  height: 35px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #004c97;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.messages {
+  width: 1000px;
+  height: 640px;
+  overflow-y: auto;
+  border: 1px solid #282424;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #282424;
+  margin-right: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.users {
+  width: 250px;
+  font-size: 20px;
+}
+
+.message-input {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.message {
+  width: 880px;
+  border-radius: 20px;
+  height: 40px;
+  padding-left: 10px;
+  margin-right: 5px;
+}
+
+.sendMessage {
+  width: 120px;
+  padding: 10px;
+  border: none;
+  background-color: #004c97;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}

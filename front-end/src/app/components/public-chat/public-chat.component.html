@@ -1,0 +1,61 @@
+<div class="containerPage">
+  <div>
+    <input
+      [(ngModel)]="command"
+      placeholder="Entrez une commande..."
+      (keydown.enter)="handleCommand()"
+      class="command"
+    />
+  </div>
+  <div class="containerChat">
+    <div class="containerChannel">
+      <h2>Channels</h2>
+      <ul>
+        <li
+          class="channels"
+          *ngFor="let channel of filteredChannels"
+          (click)="changeChannel(channel)"
+          [class.active]="channel.name === currentChannel"
+          [class.gris]="!joinedChannels.has(channel.name)"
+        >
+          {{ channel.name }}
+          <div class="containerButton">
+            <a class="button" *ngIf="joinedChannels.has(channel.name)" (click)="quitChannel(channel)">Quitter</a>
+            <a class="button" *ngIf="joinedChannels.has(channel.name)" (click)="toggleUserList()">Users</a>
+            <a class="button" *ngIf="!joinedChannels.has(channel.name)" (click)="joinChannel(channel.name)" class="normal">Rejoindre</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="chat-window">
+      <div class="messages">
+        <h3>Messages dans #{{ currentChannel }}</h3>
+        <ul>
+          <li class="user-msg" *ngFor="let msg of messages">
+            <strong>{{ msg.user }} :</strong>{{ msg.text }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="message-input">
+        <input
+          [(ngModel)]="message"
+          placeholder="Tapez un message..."
+          (keydown.enter)="sendMessage()"
+          class="message"
+        />
+        <button class="sendMessage" (click)="sendMessage()">Envoyer</button>
+      </div>
+    </div>
+
+    <div *ngIf="showUserList" class="users">
+      <h3>Utilisateurs connectés</h3>
+      <ul>
+        <li *ngFor="let user of connectedUsers">
+          {{ user }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

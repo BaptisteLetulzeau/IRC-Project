@@ -1,0 +1,26 @@
+.title {
+    font-family: 'Outfit', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+    height: 100px;
+    padding-right: 20px;
+}
+
+a {
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}

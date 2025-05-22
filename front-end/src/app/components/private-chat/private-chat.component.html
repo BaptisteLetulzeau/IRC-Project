@@ -1,0 +1,54 @@
+<div class="containerPage">
+  <div class="user-list">
+    <h3>Utilisateurs disponibles</h3>
+    <ul class="users">
+      <li
+        class="user"
+        *ngFor="let user of userList"
+        (click)="selectUser(user.username)"
+        [class.selected]="user.username === selectedUser"
+      >
+        {{ user.username }}
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="selectedUser">
+    <div class="messages">
+      <h3>Message privé à : {{ selectedUser }}</h3>
+      <ul>
+        <li *ngFor="let msg of privateMessages" class="message-container">
+          <div
+            class="message-header"
+            [ngClass]="{
+              'sent-header': isCurrentUser(msg.sender),
+              'received-header': !isCurrentUser(msg.sender)
+            }"
+          >
+            <strong>{{
+              isCurrentUser(msg.sender) ? "Moi" : msg.sender
+            }}</strong>
+          </div>
+          <p
+            class="message-text"
+            [ngClass]="{
+              sent: isCurrentUser(msg.sender),
+              received: !isCurrentUser(msg.sender)
+            }"
+          >
+            {{ msg.text }}
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <input
+        class="message"
+        [(ngModel)]="message"
+        placeholder="Tapez votre message..."
+        (keyup.enter)="sendMessage()"
+      />
+      <button class="sendMessage" (click)="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+</div>

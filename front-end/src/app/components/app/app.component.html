@@ -1,0 +1,11 @@
+<nav>
+  <h1 class="title">{{ title }}</h1>
+  <div class="nav">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/signup">Signup</a>
+    <a href="#" (click)="onLogout($event)">Logout</a>
+    <a routerLink="/nick">Modify username</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

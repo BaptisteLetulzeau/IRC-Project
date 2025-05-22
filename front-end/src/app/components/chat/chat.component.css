@@ -1,0 +1,27 @@
+.app {
+  height: 100%;
+  width: 100%;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Outfit', sans-serif;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #004c97;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
