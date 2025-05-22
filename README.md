@@ -1,4 +1,4 @@
-# 📌 Nom du Projet
+# 📌 IRC Project
 
 Une application de chat en temps réel utilisant Angular et Node.js avec une architecture basée sur MongoDB.
 
